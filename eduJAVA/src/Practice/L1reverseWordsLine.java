@@ -6,6 +6,7 @@ public class L1reverseWordsLine {
     {
         String [] str= S.split("[.]");
         String temp="";
+        
         for(int i= str.length-1;i>=0;i--){
             if(i!=0)
                 temp+=str[i]+"."; 
@@ -19,6 +20,7 @@ public class L1reverseWordsLine {
 			String s = in.nextLine();
 			System.out.println( reverseWords(s));
 			in.close();
+			
 		}
 	}
 	
