@@ -43,6 +43,7 @@ public class Stident {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the course to filter for: ");
 		String course = scanner.nextLine();
+		scanner.close();
 
 		StidentPredicate coursePredicate = Stident -> Stident.getCourse().equals(course);
 		List<Stident> filteredStidents = filterStidents(stidents, coursePredicate);

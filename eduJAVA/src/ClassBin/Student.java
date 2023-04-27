@@ -40,6 +40,7 @@ public class Student {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the course to filter for: ");
         String course = scanner.nextLine();
+        scanner.close();
 
 
         Predicate<Student> coursePredicate = student -> student.getCourse().equals(course);
