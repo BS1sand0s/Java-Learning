@@ -28,10 +28,10 @@ public class restaurantOrder {
 				while (!isTableAvailable) {
 					System.out.print("Enter table number: ");
 					tableNumber = scanner.nextInt();
-					if (tables[tableNumber - 1].isOccupied()) {
-						System.out.println("Table is occupied. Please try another table.");
-					} else if (tableNumber > 5) {
+					if (tableNumber > 5) {
 						System.out.println("Table does not exist. Please check your table number.");
+					} else if (tables[tableNumber - 1].isOccupied()) {
+						System.out.println("Table is occupied. Please try another table.");
 					} else {
 						isTableAvailable = true;
 						tables[tableNumber - 1].setOccupied(true);// can open thread for table and close on bill
